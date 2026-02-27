@@ -3,28 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZOZEV - The future of minimalist fashion and global branding.">
     <title>zozev</title>
     <style>
-        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #ffffff; font-family: sans-serif; }
-        .container { text-align: center; }
-        img { max-width: 150px; margin-bottom: 10px; }
-        h1 { font-size: 80px; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 1; text-transform: lowercase; }
+        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #ffffff; font-family: sans-serif; transition: 0.5s; }
+        .container { text-align: center; padding: 20px; max-width: 600px; }
+        h1 { font-size: 80px; font-weight: 900; margin: 0; color: #000; letter-spacing: -3px; text-transform: lowercase; }
         .divider { width: 60px; height: 5px; background-color: #0070f3; margin: 30px auto; border-radius: 10px; }
-        .brand-ru { font-size: 24px; font-weight: 400; color: #666666; margin-bottom: 60px; letter-spacing: 5px; text-transform: lowercase; }
-        .inquiry-btn { text-decoration: none; color: #999; font-size: 14px; letter-spacing: 1px; border: 1px solid #eee; padding: 8px 20px; border-radius: 50px; transition: 0.3s; }
-        .inquiry-btn:hover { color: #000; border-color: #000; }
+        .brand-ru { font-size: 24px; color: #666; margin-bottom: 50px; letter-spacing: 5px; }
+        .btn { text-decoration: none; color: #999; font-size: 13px; border: 1px solid #eee; padding: 8px 18px; border-radius: 50px; margin: 0 5px; cursor: pointer; background: none; }
+        .btn:hover { color: #000; border-color: #000; }
+        
+        /* تنسيق المقال المخفي */
+        #article { display: none; margin-top: 50px; text-align: left; padding: 20px; border-top: 1px solid #eee; line-height: 1.6; }
+        .article-en { color: #333; font-size: 16px; margin-bottom: 20px; }
+        .article-ru { color: #666; font-size: 15px; font-style: italic; border-left: 3px solid #0070f3; padding-left: 15px; }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="logo.png" alt="" onerror="this.style.display='none'">
-        
         <h1>zozev</h1>
         <div class="divider"></div>
         <p class="brand-ru">зозев</p>
         
-        <br><br>
-        <a href="mailto:Gxona@proton.me" class="inquiry-btn">Inquire about the brand</a>
+        <div class="nav-links">
+            <a href="mailto:Gxona@proton.me" class="btn">Inquire</a>
+            <button class="btn" onclick="showArticle()">Blog / Philosophy</button>
+        </div>
+
+        <div id="article">
+            <div class="article-en">
+                <strong>The Essence of ZOZEV:</strong><br>
+                ZOZEV represents the peak of modern minimalism. Designed as a bridge between high-fashion and digital innovation, its unique phonetic structure makes it a global powerhouse for any luxury brand.
+            </div>
+            <div class="article-ru">
+                <strong>Сущность ZOZEV:</strong><br>
+                ZOZEV олицетворяет пик современного минимализма. Созданный как мост между высокой модой и цифровыми инновациями, его уникальная фонетическая структура делает его глобальным символом для любого люксового бренда.
+            </div>
+        </div>
     </div>
+
+    <script>
+        function showArticle() {
+            var x = document.getElementById("article");
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                window.scrollTo(0, document.body.scrollHeight);
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
