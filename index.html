@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zozev</title>
+    <style>
+        /* إعدادات الصفحة العامة */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff; /* خلفية بيضاء نظيفة */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+        }
+
+        .main-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* تنسيق اللوجو - سيظهر فقط إذا رفعت صورة باسم logo.png */
+        .logo-box img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        /* الاسم بالإنجليزي - بارز جداً */
+        .brand-en {
+            font-size: clamp(4rem, 15vw, 7rem); /* يتمدد حسب حجم الشاشة */
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin: 0;
+            text-transform: lowercase;
+            color: #000000;
+        }
+
+        /* الاسم بالروسي - واضح وأنيق */
+        .brand-ru {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 400;
+            color: #666666;
+            margin-top: 10px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        /* خط زينة بسيط */
+        .divider {
+            width: 60px;
+            height: 5px;
+            background-color: #0070f3; /* لون أزرق مميز */
+            margin: 30px auto;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="logo-box">
+            <img src="logo.png" alt="" onerror="this.style.display='none'">
+        </div>
+
+        <h1 class="brand-en">zozev</h1>
+        
+        <div class="divider"></div>
+        
+        <span class="brand-ru">зозев</span>
+
+    </div>
+
+</body>
+</html>
